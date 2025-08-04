@@ -22,6 +22,3 @@ dist/
 db.sqlite3
 pycache/
 
-package-lock.json
-
-package.json
