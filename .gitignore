@@ -1,24 +1,48 @@
-.venv/
-
-media/
 # Python
-*.pyc
 __pycache__/
-db.sqlite3
-
-# Django
-staticfiles/
-.env
+*.py[cod]
+*.sqlite3
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
 *.log
 
-# OS/System
+# VS Code / IDE
+.vscode/
+.idea/
+
+# OS files
 .DS_Store
-*.swp
+Thumbs.db
 
-# Node/Tailwind
+# Django
+*.pot
+*.pyc
+
+/media/
+
+# Migrations
+**/migrations/*.py
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# Tailwind / Node
 node_modules/
-dist/
 
-db.sqlite3
-pycache/
+
+# Docker
+*.pid
+*.tar
+
+
+
+# Environment Variables
+.env
+.env.*
+
 
