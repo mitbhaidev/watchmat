@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'contact',
     'cloudinary',
     'cloudinary_storage',
-    'django.contrib.staticfiles',
 ]
 
 
