@@ -28,6 +28,8 @@ RUN npm run build
 
 EXPOSE 8000
 
+RUN touch /app/db.sqlite3 && chmod 666 /app/db.sqlite3
+
 
 CMD ["sh", "-c", "python manage.py collectstatic --noinput && gunicorn ecommerce.wsgi:application --bind 0.0.0.0:8000"]
 
