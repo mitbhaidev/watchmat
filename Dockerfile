@@ -27,6 +27,11 @@ RUN npm install
 RUN npm run build
 
 
-CMD ["sh", "-c", "python manage.py collectstatic --noinput && gunicorn ecommerce.wsgi:application --bind 0.0.0.0:8000"]
+CMD ["sh", "-c", "\
+  python manage.py collectstatic --noinput && \
+  python manage.py migrate && \
+  python manage.py createsuperuser --noinput || true && \
+  gunicorn ecommerce.wsgi:application --bind 0.0.0.0:8000 \
+"]
 
 EXPOSE 8000
