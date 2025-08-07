@@ -16,6 +16,9 @@ DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
+DEFAULT_FILE_STORAGE = 'imagekitio.storages.MediaStorage'
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,12 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'contact',
     'imagekitio',
-    
 ]
-
-
-
-
 
 
 
@@ -171,7 +169,6 @@ IMAGEKIT_PUBLIC_KEY = env('IMAGEKIT_PUBLIC_KEY')
 IMAGEKIT_PRIVATE_KEY = env('IMAGEKIT_PRIVATE_KEY')
 IMAGEKIT_URL_ENDPOINT = env('IMAGEKIT_URL_ENDPOINT')
 
-DEFAULT_FILE_STORAGE = 'imagekitio.storages.MediaStorage'
 
 
 # MEDIA_URL = '/media/'
