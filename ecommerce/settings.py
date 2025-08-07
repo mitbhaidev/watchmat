@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'reviews',
     'django.contrib.humanize',
     'contact',
+    'imagekitio',
     
 ]
 
@@ -166,9 +167,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
+IMAGEKIT_PUBLIC_KEY = env('IMAGEKIT_PUBLIC_KEY')
+IMAGEKIT_PRIVATE_KEY = env('IMAGEKIT_PRIVATE_KEY')
+IMAGEKIT_URL_ENDPOINT = env('IMAGEKIT_URL_ENDPOINT')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DEFAULT_FILE_STORAGE = 'imagekitio.storages.MediaStorage'
+
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
