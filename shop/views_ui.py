@@ -83,8 +83,7 @@ def add_to_cart(request, product_id):
     cart, created = Cart.objects.get_or_create(user=request.user)
     cart_item, created = CartItem.objects.get_or_create(cart=cart, product=product)
 
-    if cart_item.quantity < product.stock:
-        cart_item.quantity += 1
+    if cart_item.quantity :
         cart_item.save()
         messages.success(request, f"{product.name} added to your cart.")
     else:

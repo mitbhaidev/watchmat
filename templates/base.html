@@ -31,7 +31,7 @@
         <a href="{% url 'my_orders' %}" class="hover:text-gray-200">My Orders</a>
           <a href="{% url 'my_account' %}" class="hover:text-gray-200">Account</a>
           <a href="{% url 'wishlist' %}" class="hover:text-gray-200">Wishlist</a>
-          <a href="{% url 'view_cart' %}" class="hover:text-gray-200 flex items-center">🛍️ <span class="ml-1">Cart</span></a>
+          <a href="{% url 'view_cart' %}" class="hover:text-gray-200 flex items-center">Cart</a>
           <a href="{% url 'contact' %}" class="hover:text-gray-200">Contact</a>
         {% else %}
           <a href="{% url 'login' %}" class="hover:text-gray-200">Login</a>
@@ -60,7 +60,9 @@
     <a href="{% url 'my_orders' %}" class="block py-2 border-b border-blue-500">My Orders</a>
       <a href="{% url 'my_account' %}" class="block py-2 border-b border-blue-500">Account</a>
       <a href="{% url 'wishlist' %}" class="block py-2 border-b border-blue-500">Wishlist</a>
-      <a href="{% url 'view_cart' %}" class="block py-2 border-b border-blue-500">🛍️ Cart</a>
+      <a href="{% url 'view_cart' %}" class="block py-2 border-b border-blue-500">Cart</a>
+      <a href="{% url 'contact' %}" class="hover:text-gray-200">Contact</a>
+
       <a href="{% url 'logout' %}" class="block py-2 text-red-300">Logout</a>
     {% else %}
       <a href="{% url 'login' %}" class="block py-2 border-b border-blue-500">Login</a>
@@ -91,7 +93,7 @@
   <footer class="bg-gray-800 text-gray-300 py-4 mt-10">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
       <p>&copy; {{ now.year }} watchmart. All rights reserved.</p>
-      <p><a href="#" class="underline hover:text-white">Contact Us</a></p>
+      <p><a href="{% url 'contact' %}" class="underline hover:text-white">Contact Us</a></p>
     </div>
   </footer>
 
